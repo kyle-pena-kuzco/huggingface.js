@@ -316,6 +316,7 @@ export async function* commitIter(params: CommitParams): AsyncGenerator<CommitPr
 						});
 						const content = op.content;
 						const header = obj.actions.upload.header;
+						console.log(">>>>>header?.chunk_size", header?.chunk_size);
 						if (header?.chunk_size) {
 							const chunkSize = parseInt(header.chunk_size);
 
